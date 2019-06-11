@@ -11,5 +11,11 @@ After downloading the Cohn-Kanade dataset, a previously unfound report was downl
 
 This brought an important point to my mind, because there are not only neural networks to identify an emotion, but also Support Vector Machines which use algorithms to classify an image from its general features (Gent, 2016) and also from landmarks, depending on what kernel is used, rather than just facial landmarks (or Action Units) to be taken and fed into it like a neural network would (such as a Feed Forward neural network).  Which would be better?  Would a newer kind of neural network be better, such as a convoluted neural network (CNN), which is better at handling visual data, be better suited to the task?  Before a system can be developed to identify a single emotion such as pain, the algorithms used must be looked at first, and then how to link biological signals from the subject to the facial movements to identify the correct emotion and its level can be decided on.
 
+So, my first steps are to try support vector machines and see how good they are at identifying emotions in images, and then to try a CNN to see how that managed with the same task.
 
 
+To ensure that the images I used for the neural networks were a ‘perceptually accurate representation’ (Christopher Kanan, 2012) I researched whether using colour images versus grayscale images were best.  In cases where colour is a key component of identifying the image then obviously colour images must be used, but this brings problems with the illumination of the image, having to compensate for the time of day, season and lighting angles.  If colour is not needed for image recognition then it just becomes ‘noise’ of the image, unnecessary information that does not need to be processed for the task.  Also finding the edges of images whilst working in grayscale is easier as the luminance can interfere and makes coding for the images more complex (Rethunk, 2012).  Using grayscale images negates all these problems, and cuts processing time of an image by three or four times (Rethunk, 2012) compared to colour images.
+
+## Performance analysis and results
+### Support Vector Machines
+#### Polynomial Kernel
